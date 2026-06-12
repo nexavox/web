@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void-black: #ffffff;
+  --color-background: #f8f9ff;
+
+  /* Premium Emerald Green (Primary) */
+  --color-primary: #059669;
+  --color-primary-container: #059669;
+
+  /* Premium Royal Blue (Secondary) */
+  --color-secondary: #1d4ed8;
+  --color-secondary-container: #1d4ed8;
+
+  --color-tertiary: #d97706;
+  --color-tertiary-container: #d97706;
+  --color-grid-line: #e2e8f0;
+  --color-text-muted: #d97706;
+
+  --color-surface-dim: #f1f5f9;
+  --color-surface-elevated: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8fafc;
+  --color-surface-container: #f1f5f9;
+  --color-surface-container-high: #e2e8f0;
+  --color-surface-container-highest: #cbd5e1;
+  --color-surface-bright: #e2e8f0;
+
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #334155;
+  --color-outline: #94a3b8;
+  --color-outline-variant: #cbd5e1;
+  --color-error: #dc2626;
+  --color-error-container: #fee2e2;
+  --color-on-error: #991b1b;
+
+  --font-display-xl: "Inter", sans-serif;
+  --font-caption-bold: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-label-mono: "JetBrains Mono", monospace;
+  --font-headline-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+
+  --spacing-grid-gutter: 1px;
+  --spacing-grid-margin: 2rem;
+  --spacing-stack-md: 1.5rem;
+  --spacing-stack-lg: 4rem;
+  --spacing-stack-sm: 0.5rem;
+}
+
+body {
+  background-color: #f8f9ff;
+  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+}
+
+.bento-border {
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-hover:hover {
+  border-color: #059669;
+  box-shadow: 4px 4px 0px #059669;
+  transform: translate(-4px, -4px);
+}
+
+.bento-hover-blue:hover {
+  border-color: #1d4ed8;
+  box-shadow: 4px 4px 0px #1d4ed8;
+  transform: translate(-4px, -4px);
+}
+
+.neon-text-primary {
+  text-shadow: 0 0 10px rgba(5, 150, 105, 0.15);
+}
+
+.bg-surface-bento {
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #059669;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 4px 4px 0px #1d4ed8;
+  /* Contrast drop shadow for button */
+  transform: translate(-2px, -2px);
+  background-color: #047857;
+}
+
+.btn-secondary {
+  border: 1px solid #059669;
+  color: #059669;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(5, 150, 105, 0.08);
+  box-shadow: 2px 2px 0px #059669;
+  transform: translate(-1px, -1px);
+}
+
+.btn-blue {
+  border: 1px solid #1d4ed8;
+  color: #1d4ed8;
+  transition: all 0.2s ease;
+}
+
+.btn-blue:hover {
+  background-color: rgba(29, 78, 216, 0.08);
+  box-shadow: 2px 2px 0px #1d4ed8;
+  transform: translate(-1px, -1px);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #059669;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(5, 150, 105, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom scrollbar for brutalist terminal interfaces */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
